@@ -3,6 +3,7 @@ package com.mycatw.demorest;
 import java.util.Arrays;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -13,24 +14,25 @@ import java.util.List;
 @Path("mycats")
 public class CatResource {
 
-	
+	CatsDA d1 = new CatsDA();
+
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
-public List<Cat> getCat(){
-		
+	public List<Cat> getCat() {
+
 		System.out.println("getCat method calles!!");
-	Cat c=new Cat();
-	c.setName("Adaykshaka");
-	c.setPoints(100);
+
+		return d1.getCats();
+
+	}
 	
-	Cat c1=new Cat();
-	c1.setName("ChinChin");
-	c1.setPoints(200);
+	@POST
+	@Path("cat")
+	public Cat createCat(Cat c3){
 	
-	
-	List<Cat> cats = Arrays.asList(c,c1);
-	
-	return cats;
-}
-	
+		System.out.println(c3);
+		d1.create(c3);
+		return c3;
+	}
+
 }

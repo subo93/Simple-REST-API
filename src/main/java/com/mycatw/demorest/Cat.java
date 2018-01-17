@@ -1,6 +1,8 @@
 package com.mycatw.demorest;
 
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
+import java.util.Arrays;
 //import javax.xml.blind.annotation.XmlRootElemant;
 
 @XmlRootElement
@@ -18,6 +20,15 @@ public int getPoints() {
 }
 public void setPoints(int points) {
 	this.points = points;
+}
+
+public String getId()
+{
+   return this.name;
+}
+@Override
+public String toString() {
+	return "Cat [name=" + name + ", points=" + points + "]";
 }
 
 
