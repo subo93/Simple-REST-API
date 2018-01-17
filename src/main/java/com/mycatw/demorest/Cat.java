@@ -7,29 +7,32 @@ import java.util.Arrays;
 
 @XmlRootElement
 public class Cat {
-private String name;
-private int points;
-public String getName() {
-	return name;
-}
-public void setName(String name) {
-	this.name = name;
-}
-public int getPoints() {
-	return points;
-}
-public void setPoints(int points) {
-	this.points = points;
-}
+	private String name;
+	private int points;
 
-public String getId()
-{
-   return this.name;
-}
-@Override
-public String toString() {
-	return "Cat [name=" + name + ", points=" + points + "]";
-}
+	public String getName() {
+		return name;
+	}
 
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getPoints() {
+		return points;
+	}
+
+	public void setPoints(int points) {
+		this.points = points;
+	}
+
+	public String getId() {
+		return this.name;
+	}
+
+	@Override
+	public String toString() {
+		return "Cat [name=" + name + ", points=" + points + "]";
+	}
 
 }
