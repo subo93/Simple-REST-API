@@ -2,6 +2,8 @@ package com.mycatw.demorest;
 
 import java.util.Arrays;
 
+//import javax.websocket.server.PathParam;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -26,12 +28,14 @@ public class CatResource {
 	}
 
 	@GET
-	@Path("cat/100")
-	@Produces(MediaType.APPLICATION_XML)
-
-	public Cat getCat1() {
+	@Path("cat/{value}")
+	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+	public Cat getCat1(@PathParam("value")int id) {
+		
 		System.out.println("inside /100");
-		return d1.getCat("ChinChin");
+		System.out.println("id value is "+id);
+		System.out.println("after value");
+		return d1.getCat(id);
 	}
 
 	@POST

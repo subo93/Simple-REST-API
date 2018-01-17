@@ -11,12 +11,12 @@ public class CatsDA {
 		cc = new ArrayList<>();
 
 		Cat c1 = new Cat();
-		c1.setName("Adaykshaka");
-		c1.setPoints(100);
+		c1.setName("aa");
+		c1.setPoints(11);
 
 		Cat c2 = new Cat();
-		c2.setName("ChinChin");
-		c2.setPoints(200);
+		c2.setName("bb");
+		c2.setPoints(12);
 
 		cc.add(c1);
 		cc.add(c2);
@@ -28,7 +28,7 @@ public class CatsDA {
 		return cc;
 	}
 
-	public Cat getCat(String id) {
+	public Cat getCat(int id) {
 		
 			
 		for (Cat c : cc) {

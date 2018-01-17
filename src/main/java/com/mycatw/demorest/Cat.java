@@ -26,8 +26,8 @@ public class Cat {
 		this.points = points;
 	}
 
-	public String getId() {
-		return this.name;
+	public int getId() {
+		return this.points;
 	}
 
 	@Override
