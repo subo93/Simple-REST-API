@@ -68,7 +68,7 @@ public class CatsDA {
 		/*
 		 * for (Cat c : cc) { if (c.getId() == id) return c; } return new Cat();
 		 */
-		String sql1 = "select * from cat where point="+id;
+		String sql1 = "select * from cat where points="+id;
 		Cat a = new Cat();
 		try {
 			Statement st = con.createStatement();
